@@ -7,7 +7,6 @@ struct Node {
 };
 
 struct Node* Start;
-struct Node* End;
 int Sz;
 
 void init()
@@ -48,6 +47,8 @@ void pop()
         printf("Stack is empty.\n");
         return;
     }
+
+    Sz--;
 
     Start = Start->next;
 }
