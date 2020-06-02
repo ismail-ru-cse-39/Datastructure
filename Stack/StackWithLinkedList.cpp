@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define INT_MIN -2147483648
+
 struct Node {
     int val;
     struct Node *next;
@@ -12,7 +14,6 @@ int Sz;
 void init()
 {
     Start = NULL;
-    End = NULL;
     Sz = 0;
 }
 
@@ -35,7 +36,7 @@ int top()
 {
     if(Start == NULL) {
         printf("No element in the list.\n");
-        return -9999;
+        return INT_MIN;
     }
 
     return Start->val;
@@ -74,7 +75,7 @@ int main()
     init();
     while(true) {
         int choice;
-        printf("Press 1 to push, 2 to see top 3 to pop and 4 to print the Stack 5 to exit\n");
+        printf("Press 1 to push, 2 to see top 3 to pop and 4 to print the Stack 5 to length 6 to exit\n");
         scanf("%d", &choice);
 
         if(choice == 1) {
@@ -99,6 +100,10 @@ int main()
         }
 
         if(choice == 5) {
+            printf("Current stack size: %d\n", Sz);
+        }
+
+        if(choice == 6) {
             return 0;
         }
 
