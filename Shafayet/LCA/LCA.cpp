@@ -43,6 +43,8 @@ int LCAQuery(int N, int p, int q) {
 		swap(p,q);
 	}
 
+	//log to calculate the maximum depth of p and q
+
 	int log = 1;
 
 	while(true) {
